@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2025 The Stdlib Authors.
@@ -16,24 +16,17 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
 
-var numelDimension = require( '@stdlib/ndarray-base-numel-dimension' );
-var getStride = require( '@stdlib/ndarray-base-stride' );
-var getOffset = require( '@stdlib/ndarray-base-offset' );
-var getData = require( '@stdlib/ndarray-base-data-buffer' );
-var strided = require( '@stdlib/blas-base-gdot' ).ndarray;
-
-
-// MAIN //
+import { ndarray } from '@stdlib/types/ndarray';
 
 /**
 * Computes the dot product of two one-dimensional ndarrays.
 *
-* @param {ArrayLikeObject<Object>} arrays - array-like object containing two one-dimensional input ndarrays
-* @returns {number} dot product
+* @param arrays - array-like object containing two one-dimensional input ndarrays
+* @returns dot product
 *
 * @example
 * var ndarray = require( '@stdlib/ndarray-base-ctor' );
@@ -47,13 +40,9 @@ var strided = require( '@stdlib/blas-base-gdot' ).ndarray;
 * var z = gdot( [ x, y ] );
 * // returns -5.0
 */
-function gdot( arrays ) {
-	var x = arrays[ 0 ];
-	var y = arrays[ 1 ];
-	return strided( numelDimension( x, 0 ), getData( x ), getStride( x, 0 ), getOffset( x ), getData( y ), getStride( y, 0 ), getOffset( y ) ); // eslint-disable-line max-len
-}
+declare function gdot<T extends ndarray = ndarray>( arrays: [ T, T ] ): number;
 
 
 // EXPORTS //
 
-module.exports = gdot;
+export = gdot;
