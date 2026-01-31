@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/blas-base-ndarray-gdot",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Compute the dot product of two one-dimensional ndarrays.",
   "license": "Apache-2.0",
   "author": {
