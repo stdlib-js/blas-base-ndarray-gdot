@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-04-07)
+## Unreleased (2026-04-12)
 
 <section class="commits">
 
@@ -12,6 +12,7 @@
 
 <details>
 
+-   [`39db70f`](https://github.com/stdlib-js/stdlib/commit/39db70f0446038735b98e82abc26b369ac34938f) - **bench:** refactor to use string interpolation in `@stdlib/blas` [(#11397)](https:-/github.com/stdlib-js/stdlib/pull/11397) _(by Karan Anand)_
 -   [`04fd54f`](https://github.com/stdlib-js/stdlib/commit/04fd54f42c8c1b0af88660d7ce791f71891a2187) - **refactor:** improve type specificity in `blas/base/ndarray/gdot` [(#11245)](https://github.com/stdlib-js/stdlib/pull/11245) _(by Kaustubh Patange)_
 
 </details>
@@ -24,8 +25,9 @@
 
 ### Contributors
 
-A total of 1 person contributed to this release. Thank you to this contributor:
+A total of 2 people contributed to this release. Thank you to the following contributors:
 
+-   Karan Anand
 -   Kaustubh Patange
 
 </section>
