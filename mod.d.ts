@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2025 The Stdlib Authors.
@@ -16,16 +16,20 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
+
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
+
+import { typedndarray } from '@stdlib/types/ndarray';
 
 /**
-* BLAS level 1 routine to compute the dot product of two one-dimensional ndarrays.
+* Computes the dot product of two one-dimensional ndarrays.
 *
-* @module @stdlib/blas-base-ndarray-gdot
+* @param arrays - array-like object containing two one-dimensional input ndarrays
+* @returns dot product
 *
 * @example
 * var vector = require( '@stdlib/ndarray-vector-ctor' );
-* var gdot = require( '@stdlib/blas-base-ndarray-gdot' );
 *
 * var x = vector( [ 4.0, 2.0, -3.0, 5.0, -1.0 ], 'generic' );
 * var y = vector( [ 2.0, 6.0, -1.0, -4.0, 8.0 ], 'generic' );
@@ -33,12 +37,9 @@
 * var z = gdot( [ x, y ] );
 * // returns -5.0
 */
-
-// MODULES //
-
-var main = require( './main.js' );
+declare function gdot<T extends typedndarray<number> = typedndarray<number>>( arrays: [ T, T ] ): number;
 
 
 // EXPORTS //
 
-module.exports = main;
+export = gdot;
